@@ -1,9 +1,9 @@
-import React from 'react';
+import { AppRouter } from './router/AppRouter';
 
 export const ScrewsApp = () => {
   return (
     <>
-        <h1>App Tornillería</h1>
+      <AppRouter />
     </>
   );
 };
