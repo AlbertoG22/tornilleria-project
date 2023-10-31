@@ -1,7 +1,10 @@
 import { Typography } from '@mui/material';
+import { DashboardLayout } from '../layout/dashboardLayout';
 
 export const HomePage = () => {
   return (
-    <Typography variant='h1'>HomePage</Typography>
+    <DashboardLayout>
+      <Typography variant='p'>HomePage</Typography>
+    </DashboardLayout>
   );
 };
