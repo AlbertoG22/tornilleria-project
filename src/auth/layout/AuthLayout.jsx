@@ -1,4 +1,5 @@
-import { Grid, Typography } from '@mui/material';
+import { LockOutlined } from '@mui/icons-material';
+import { Avatar, Grid, Typography } from '@mui/material';
 
 export const AuthLayout = ({ children, title = '' }) => {
   return (
@@ -21,7 +22,12 @@ export const AuthLayout = ({ children, title = '' }) => {
           borderRadius: 2
         }}
       >
-        <Typography variant='h5' sx={{ mb: 1 }}>{ title }</Typography>
+        <Grid display='flex' flexDirection='column' alignItems='center'>
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <LockOutlined />
+          </Avatar>
+          <Typography variant='h5' sx={{ mb: 1 }}>{ title }</Typography>
+        </Grid>
 
         { children }
 

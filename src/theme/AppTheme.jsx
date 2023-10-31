@@ -5,8 +5,8 @@ import { blueTheme } from './';
 export const AppTheme = ({ children }) => {
   return (
     <ThemeProvider theme={ blueTheme }>
-        <CssBaseline />
-        { children }
+      <CssBaseline />
+      { children }
     </ThemeProvider>
   );
 };
