@@ -1,6 +1,5 @@
-import { ChevronLeft, ChevronRight, Mail, MoveToInbox } from "@mui/icons-material";
-import { Divider, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
-import React from "react";
+import { ChevronLeft, ChevronRight, Mail, MoveToInbox } from '@mui/icons-material';
+import { Divider, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 
 export const Drawer = ({ StyledDrawer, DrawerHeader, theme, handleDrawerClose, drawerOpen }) => {
   return (

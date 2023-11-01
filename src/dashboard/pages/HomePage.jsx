@@ -4,7 +4,7 @@ import { DashboardLayout } from '../layout/dashboardLayout';
 export const HomePage = () => {
   return (
     <DashboardLayout>
-      <Typography variant='p'>HomePage</Typography>
+      <Typography variant='h6'>Home Page</Typography>
     </DashboardLayout>
   );
 };
