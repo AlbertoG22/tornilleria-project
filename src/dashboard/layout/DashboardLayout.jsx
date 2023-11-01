@@ -19,6 +19,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import { Drawer } from "../components/Drawer";
 
 const drawerWidth = 240;
 
@@ -82,7 +83,7 @@ export const DashboardLayout = ({ children }) => {
     ...theme.mixins.toolbar,
   }));
 
-  const Drawer = styled(MuiDrawer, {
+  const StyledDrawer = styled(MuiDrawer, {
     shouldForwardProp: (prop) => prop !== "open",
   })(({ theme, open }) => ({
     width: drawerWidth,
@@ -106,6 +107,7 @@ export const DashboardLayout = ({ children }) => {
       {/* <Dashboard /> */}
 
       {/* Sidebar */}
+      <Drawer StyledDrawer={StyledDrawer} DrawerHeader={DrawerHeader} theme={theme} handleDrawerClose={handleDrawerClose} drawerOpen={open} />
 
       {/* <Box
         component='main'
@@ -137,7 +139,7 @@ export const DashboardLayout = ({ children }) => {
         </Toolbar>
       </AppBar> */}
 
-      <Drawer variant="permanent" open={open}>
+      {/* <StyledDrawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? (
@@ -199,7 +201,7 @@ export const DashboardLayout = ({ children }) => {
             </ListItem>
           ))}
         </List>
-      </Drawer>
+      </StyledDrawer> */}
 
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
