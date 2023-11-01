@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import { NavBar } from "../components/Navbar";
 import { useState } from "react";
 import { styled, useTheme } from "@mui/material/styles";
@@ -21,11 +21,14 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { Drawer } from "../components/Drawer";
 
-const drawerWidth = 240;
+const largeDrawerWidth = 240;
+const smallDrawerWidth = 180;
 
 export const DashboardLayout = ({ children }) => {
   const theme = useTheme();
-  const [open, setOpen] = useState(true);
+  const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm')); // pantalla menor a 600px
+  const drawerWidth = isScreenSmall ? smallDrawerWidth : largeDrawerWidth;
+  const [open, setOpen] = useState(!isScreenSmall);
 
   const handleDrawerOpen = () => {
     setOpen(true);
