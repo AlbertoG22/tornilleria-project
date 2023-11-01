@@ -19,27 +19,10 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 
-export const NavBar = ({ handleDrawerOpen, drawerWidth }) => {
-  const AppBar = styled(MuiAppBar, {
-    shouldForwardProp: (prop) => prop !== "open",
-  })(({ theme, open }) => ({
-    zIndex: theme.zIndex.drawer + 1,
-    transition: theme.transitions.create(["width", "margin"], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    ...(open && {
-      marginLeft: drawerWidth,
-      width: `calc(100% - ${drawerWidth}px)`,
-      transition: theme.transitions.create(["width", "margin"], {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-    }),
-  }));
+export const NavBar = ({ AppBar, handleDrawerOpen, drawerOpen }) => {
 
   return (
-    <AppBar position="fixed" open={open}>
+    <AppBar position="fixed" open={drawerOpen}>
       <Toolbar>
         <IconButton
           color="inherit"
@@ -48,7 +31,7 @@ export const NavBar = ({ handleDrawerOpen, drawerWidth }) => {
           edge="start"
           sx={{
             marginRight: 5,
-            ...(open && { display: "none" }),
+            ...(drawerOpen && { display: "none" }),
           }}
         >
           <MenuIcon />
