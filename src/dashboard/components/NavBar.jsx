@@ -2,7 +2,6 @@ import { Toolbar, Typography, IconButton } from '@mui/material';
 import { Menu } from '@mui/icons-material';
 
 export const NavBar = ({ AppBar, handleDrawerOpen, drawerOpen }) => {
-
   return (
     <AppBar position="fixed" open={drawerOpen}>
       <Toolbar>

@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, Mail, MoveToInbox } from '@mui/icons-material';
+import { ChevronLeft, ChevronRight, Logout, Mail, MoveToInbox } from '@mui/icons-material';
 import { Divider, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 
 export const Drawer = ({ StyledDrawer, DrawerHeader, theme, handleDrawerClose, drawerOpen }) => {
@@ -16,7 +16,7 @@ export const Drawer = ({ StyledDrawer, DrawerHeader, theme, handleDrawerClose, d
 
       <Divider />
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+        {["Cotizaciones", "Urrea"].map((text, index) => (
           <ListItem key={text} disablePadding sx={{ display: "block" }}>
             <ListItemButton
               sx={{
@@ -42,7 +42,7 @@ export const Drawer = ({ StyledDrawer, DrawerHeader, theme, handleDrawerClose, d
 
       <Divider />
       <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
+        {["Cerrar sesión"].map((text, index) => (
           <ListItem key={text} disablePadding sx={{ display: "block" }}>
             <ListItemButton
               sx={{
@@ -58,7 +58,7 @@ export const Drawer = ({ StyledDrawer, DrawerHeader, theme, handleDrawerClose, d
                   justifyContent: "center",
                 }}
               >
-                {index % 2 === 0 ? <MoveToInbox /> : <Mail />}
+                <Logout />
               </ListItemIcon>
               <ListItemText primary={text} sx={{ opacity: drawerOpen ? 1 : 0 }} />
             </ListItemButton>
