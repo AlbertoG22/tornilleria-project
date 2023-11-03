@@ -3,10 +3,10 @@ import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, 
 import DeleteIcon from '@mui/icons-material/Delete';
 
 export const CotizacionForm = () => {
-  const [cotizaciones, setCotizaciones] = useState([{ cantidad: '', descripcion: '', precioUnitario: '', precioTotal: '' }]);
+  const [cotizaciones, setCotizaciones] = useState([{ amount: '', description: '', unitPrice: '', totalPrice: '' }]);
 
   const handleAddRow = () => {
-    setCotizaciones([...cotizaciones, { cantidad: '', descripcion: '', precioUnitario: '', precioTotal: '' }]);
+    setCotizaciones([...cotizaciones, { amount: '', description: '', unitPrice: '', totalPrice: '' }]);
   };
 
   const handleRemoveRow = (index) => {
@@ -40,29 +40,29 @@ export const CotizacionForm = () => {
               <TableRow key={index}>
                 <TableCell>
                   <TextField
-                    name="cantidad"
-                    value={cotizacion.cantidad}
+                    name="amount"
+                    value={cotizacion.amount}
                     onChange={(e) => handleInputChange(index, e)}
                   />
                 </TableCell>
                 <TableCell>
                   <TextField
-                    name="descripcion"
-                    value={cotizacion.descripcion}
+                    name="description"
+                    value={cotizacion.description}
                     onChange={(e) => handleInputChange(index, e)}
                   />
                 </TableCell>
                 <TableCell>
                   <TextField
-                    name="precioUnitario"
-                    value={cotizacion.precioUnitario}
+                    name="unitPrice"
+                    value={cotizacion.unitPrice}
                     onChange={(e) => handleInputChange(index, e)}
                   />
                 </TableCell>
                 <TableCell>
                   <TextField
-                    name="precioTotal"
-                    value={cotizacion.precioTotal}
+                    name="totalPrice"
+                    value={cotizacion.totalPrice}
                     onChange={(e) => handleInputChange(index, e)}
                   />
                 </TableCell>
@@ -77,7 +77,7 @@ export const CotizacionForm = () => {
         </Table>
       </TableContainer>
       <Button variant="contained" color="primary" onClick={handleAddRow}>
-        Agregar Fila
+        Add row
       </Button>
     </div>
   );
