@@ -1,7 +1,11 @@
-import { ChevronLeft, ChevronRight, Logout, Mail, MoveToInbox } from '@mui/icons-material';
+import { ChevronLeft, ChevronRight, Logout } from '@mui/icons-material';
 import { Divider, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import { pages } from '../../data/pages';
+import { useNavigate } from 'react-router-dom';
 
 export const Drawer = ({ StyledDrawer, DrawerHeader, theme, handleDrawerClose, drawerOpen }) => {
+  const navigate = useNavigate();
+
   return (
     <StyledDrawer variant="permanent" open={drawerOpen}>
       <DrawerHeader>
@@ -16,9 +20,10 @@ export const Drawer = ({ StyledDrawer, DrawerHeader, theme, handleDrawerClose, d
 
       <Divider />
       <List>
-        {["Cotizaciones", "Urrea"].map((text, index) => (
-          <ListItem key={text} disablePadding sx={{ display: "block" }}>
+        {pages.map((item) => (
+          <ListItem key={item.title} disablePadding sx={{ display: "block" }}>
             <ListItemButton
+              onClick={ () => navigate(item.path) }
               sx={{
                 minHeight: 48,
                 justifyContent: drawerOpen ? "initial" : "center",
@@ -32,9 +37,9 @@ export const Drawer = ({ StyledDrawer, DrawerHeader, theme, handleDrawerClose, d
                   justifyContent: "center",
                 }}
               >
-                <MoveToInbox />
+                { item.icon }
               </ListItemIcon>
-              <ListItemText primary={text} sx={{ opacity: drawerOpen ? 1 : 0 }} />
+              <ListItemText primary={item.title} sx={{ opacity: drawerOpen ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
         ))}
