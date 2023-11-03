@@ -57,7 +57,7 @@ const rows = [
   createData("Brazil", "BR", 210147125, 8515767),
 ];
 
-export default function TableComponent() {
+export const TableComponent = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 

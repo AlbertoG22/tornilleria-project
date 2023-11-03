@@ -1,5 +1,4 @@
-import { SearchField } from '../components/SearchField';
-import TableComponent from '../components/TableComponent';
+import { SearchField, TableComponent } from '../components';
 import { DashboardLayout } from '../layout/dashboardLayout';
 import { Typography } from '@mui/material';
 
