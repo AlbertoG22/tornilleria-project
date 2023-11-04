@@ -18,7 +18,7 @@ export const NavBar = ({ AppBar, handleDrawerOpen, drawerOpen }) => {
           <Menu />
         </IconButton>
         <Typography variant="h6" noWrap component="div">
-          El gallito
+          Tornillería
         </Typography>
       </Toolbar>
     </AppBar>

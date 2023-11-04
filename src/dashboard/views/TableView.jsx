@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -57,7 +57,7 @@ const rows = [
   createData("Brazil", "BR", 210147125, 8515767),
 ];
 
-export const TableComponent = () => {
+export const TableView = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 

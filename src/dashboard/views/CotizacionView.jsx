@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-export const CotizacionForm = () => {
+export const CotizacionView = () => {
   const [cotizaciones, setCotizaciones] = useState([{ amount: '', description: '', unitPrice: '', totalPrice: '' }]);
 
   const handleAddRow = () => {
