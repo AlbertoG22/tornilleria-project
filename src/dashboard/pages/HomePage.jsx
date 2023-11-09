@@ -6,7 +6,7 @@ export const HomePage = () => {
 
   return (
     <DashboardLayout>
-      <Typography variant='h6'>Cotizaciones</Typography>
+      {/* <Typography variant='h6'>Cotizaciones</Typography> */}
       <CotizacionView />
     </DashboardLayout>
   );
