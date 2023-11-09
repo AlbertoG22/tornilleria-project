@@ -1,10 +1,13 @@
 import { Box, Grid } from "@mui/material";
-import { CotizacionCard, CotizacionForm } from "../components";
+import { CotizacionCard, CotizacionForm, SearchField } from "../components";
 
 export const CotizacionView = () => {
   return (
     <>
       {/* <CotizacionForm /> */}
+      <Box sx={{ mb: 5 }}>
+        <SearchField />
+      </Box>
       <Grid
         container
         direction="row"
