@@ -2,7 +2,7 @@ import { Card, CardContent, Typography, CardActionArea } from '@mui/material';
 
 export const CotizacionCard = () => {
   return (
-    <Card sx={{ minWidth: 275, maxWidth: 300 }}>
+    <Card sx={{ minWidth: 275, maxWidth: 300, backgroundColor: 'card.main' }}>
       <CardActionArea>
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
@@ -15,9 +15,9 @@ export const CotizacionCard = () => {
                     adjective
                 </Typography> */}
           <br />
-          <Typography variant="body2">05 tornillo °8 NC 5/8 x 3</Typography>
-          <Typography variant="body2">15 tornillo °8 NC 1/2 x 2 1/2</Typography>
-          <Typography variant="body2">48 tornillo galv. 3/4 x 8 1/2</Typography>
+          <Typography variant="body2">05 tornillos °8 NC 5/8 x 3</Typography>
+          <Typography variant="body2">15 tornillos °8 NC 1/2 x 2 1/2</Typography>
+          <Typography variant="body2">48 tornillos galv. 3/4 x 8 1/2</Typography>
           <br />
           <Typography variant="body2">Total $560.00</Typography>
         </CardContent>

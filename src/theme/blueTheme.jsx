@@ -9,6 +9,9 @@ export const blueTheme = createTheme({
         secondary: {
             main: '#543884'
         },
+        card: {
+            main: '#F9F9F9'
+        },
         error: {
             main: red.A400
         }
