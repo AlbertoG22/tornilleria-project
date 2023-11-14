@@ -1,4 +1,4 @@
-import { InputBase, alpha } from '@mui/material';
+import { Box, InputBase, alpha } from '@mui/material';
 import styled from '@emotion/styled';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -6,10 +6,11 @@ export const SearchField = () => {
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    "&:hover": {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
+    // backgroundColor: alpha(theme.palette.common.white, 0.15),
+    // "&:hover": {
+    //   backgroundColor: alpha(theme.palette.common.white, 0.25),
+    // },
+    backgroundColor: '#e1e1e1',
     marginRight: theme.spacing(2),
     marginLeft: 0,
     width: "100%",
@@ -41,19 +42,26 @@ export const SearchField = () => {
         width: "20ch",
       },
     },
+    width: '100%',
+    // backgroundColor: 'red'
   }));
 
   return (
     <>
-      <Search>
-        <SearchIconWrapper>
-          <SearchIcon />
-        </SearchIconWrapper>
-        <StyledInputBase
-          placeholder="Search…"
-          inputProps={{ "aria-label": "search" }}
-        />
-      </Search>
+      <Box sx={{
+        mb: 3,
+        // backgroundColor: 'red'
+      }}>
+        <Search>
+          <SearchIconWrapper>
+            <SearchIcon />
+          </SearchIconWrapper>
+          <StyledInputBase
+            placeholder="Search…"
+            inputProps={{ "aria-label": "search" }}
+          />
+        </Search>
+      </Box>
     </>
   );
 };
