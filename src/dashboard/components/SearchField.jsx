@@ -1,4 +1,4 @@
-import { Box, InputBase, alpha } from '@mui/material';
+import { Box, Button, InputBase, alpha } from '@mui/material';
 import styled from '@emotion/styled';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -6,17 +6,17 @@ export const SearchField = () => {
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
-    // backgroundColor: alpha(theme.palette.common.white, 0.15),
-    // "&:hover": {
-    //   backgroundColor: alpha(theme.palette.common.white, 0.25),
-    // },
-    backgroundColor: '#e1e1e1',
+    backgroundColor: alpha('#e1e1e1', 0.95),
+    "&:hover": {
+      backgroundColor: alpha('#e1e1e1', 0.75),
+    },
     marginRight: theme.spacing(2),
     marginLeft: 0,
     width: "100%",
     [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(3),
-      width: "auto",
+      // width: "auto",
+      width: "50%",
     },
   }));
 
@@ -50,6 +50,10 @@ export const SearchField = () => {
     <>
       <Box sx={{
         mb: 3,
+        mt: 2,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
         // backgroundColor: 'red'
       }}>
         <Search>
@@ -57,7 +61,7 @@ export const SearchField = () => {
             <SearchIcon />
           </SearchIconWrapper>
           <StyledInputBase
-            placeholder="Search…"
+            placeholder="Buscar..."
             inputProps={{ "aria-label": "search" }}
           />
         </Search>
