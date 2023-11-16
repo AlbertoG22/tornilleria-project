@@ -4,3 +4,4 @@ export * from './SearchField';
 export * from './TableComponent';
 export * from './CotizacionesForm';
 export * from './CotizacionCard';
+export * from './IconBtn';

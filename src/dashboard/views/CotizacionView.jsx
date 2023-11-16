@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from '@mui/material';
-import { SearchField } from '../components';
+import { IconBtn } from '../components';
 
 export const CotizacionView = () => {
   return (
@@ -24,6 +24,12 @@ export const CotizacionView = () => {
         </Grid>
         <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
           <CotizacionCard />
+          </Grid>
+          <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
+          <CotizacionCard />
+          </Grid>
+        <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
+        <CotizacionCard />
         </Grid>
         <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
           <CotizacionCard />
@@ -32,26 +38,21 @@ export const CotizacionView = () => {
           <CotizacionCard />
         </Grid>
         <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
-          <CotizacionCard />
+        <CotizacionCard />
         </Grid>
         <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
-          <CotizacionCard />
+        <CotizacionCard />
         </Grid>
         <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
-          <CotizacionCard />
+        <CotizacionCard />
         </Grid>
         <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
-          <CotizacionCard />
+        <CotizacionCard />
         </Grid>
         <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
-          <CotizacionCard />
-        </Grid>
-        <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
-          <CotizacionCard />
-        </Grid>
-        <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
-          <CotizacionCard />
-        </Grid> */}
+        <CotizacionCard />
+      </Grid> */}
+        <IconBtn />
       </Grid>
     </>
   );
