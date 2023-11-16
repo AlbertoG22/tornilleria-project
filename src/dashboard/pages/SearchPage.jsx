@@ -16,8 +16,10 @@ export const SearchPage = () => {
         <Grid item xs={12}>
           <SearchField/>
         </Grid>
+        <Grid item xs={12} sx={{ mb: 5 }}>
+          <TableView />
+        </Grid>
       </Grid>
-      <TableView />
     </DashboardLayout>
   );
 };

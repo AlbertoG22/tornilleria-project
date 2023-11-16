@@ -7,7 +7,7 @@ export const blueTheme = createTheme({
             main: '#262254'
         },
         secondary: {
-            main: '#543884'
+            main: '#34495E'
         },
         card: {
             main: '#F9F9F9'
