@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { CotizacionCard, CotizacionForm, SearchField } from "../components";
 
 export const CotizacionView = () => {
@@ -14,7 +14,10 @@ export const CotizacionView = () => {
         alignItems="center"
         justifyContent="space-evenly"
       >
-        <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
+        <Grid item sx={{ mt: 18, color: 'gray' }}>
+          <Typography variant="h5">No hay cotizaciones existentes</Typography>
+        </Grid>
+        {/* <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
           <CotizacionCard />
         </Grid>
         <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
@@ -49,7 +52,7 @@ export const CotizacionView = () => {
         </Grid>
         <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
           <CotizacionCard />
-        </Grid>
+        </Grid> */}
       </Grid>
     </>
   );

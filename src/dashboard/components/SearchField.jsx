@@ -49,12 +49,11 @@ export const SearchField = () => {
   return (
     <>
       <Box sx={{
-        mb: 3,
         mt: 2,
+        mb: 4,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center'
-        // backgroundColor: 'red'
       }}>
         <Search>
           <SearchIconWrapper>
