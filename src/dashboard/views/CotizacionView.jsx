@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from '@mui/material';
-import { IconBtn } from '../components';
+import { CotizacionModal, IconBtn } from '../components';
 
 export const CotizacionView = () => {
   return (
@@ -53,6 +53,7 @@ export const CotizacionView = () => {
         <CotizacionCard />
       </Grid> */}
         <IconBtn />
+        {/* <CotizacionModal /> */}
       </Grid>
     </>
   );

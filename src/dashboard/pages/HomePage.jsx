@@ -1,13 +1,13 @@
-import { Typography } from '@mui/material';
 import { DashboardLayout } from '../layout/dashboardLayout';
 import { CotizacionView } from '../views/CotizacionView';
+import { CotizacionModal } from '../components';
 
+// ----------------------- Cotizaciones -----------------------
 export const HomePage = () => {
-
   return (
     <DashboardLayout>
-      {/* <Typography variant='h6'>Cotizaciones</Typography> */}
-      <CotizacionView />
+      <CotizacionView/>
+      <CotizacionModal />
     </DashboardLayout>
   );
 };
