@@ -7,7 +7,6 @@ export const HomePage = () => {
   return (
     <DashboardLayout>
       <CotizacionView/>
-      <CotizacionModal />
     </DashboardLayout>
   );
 };

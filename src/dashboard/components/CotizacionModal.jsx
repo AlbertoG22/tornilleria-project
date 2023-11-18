@@ -17,13 +17,13 @@ const customStyles = {
 
 Modal.setAppElement("#root");
 
-export const CotizacionModal = () => {
-  const onCloseModal = () => {
-    console.log("Cerrando modal");
-  };
-
+export const CotizacionModal = ({ isModalOpen, onCloseModal }) => {
   return (
-    <Modal isOpen={true} onRequestClose={onCloseModal} style={customStyles}>
+    <Modal
+      isOpen={isModalOpen}
+      onRequestClose={onCloseModal}
+      style={customStyles}
+    >
       <h1>Nueva Cotización</h1>
       <hr />
       <p>

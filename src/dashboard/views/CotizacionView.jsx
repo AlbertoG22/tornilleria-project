@@ -1,7 +1,18 @@
 import { Box, Grid, Typography } from '@mui/material';
 import { CotizacionModal, IconBtn } from '../components';
+import { useState } from 'react';
 
 export const CotizacionView = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <>
       <Box sx={{ mb: 5 }}>
@@ -52,8 +63,8 @@ export const CotizacionView = () => {
         <Grid item xs={12} md={6} lg={4} sx={{ mb: 5 }}>
         <CotizacionCard />
       </Grid> */}
-        <IconBtn />
-        {/* <CotizacionModal /> */}
+        <IconBtn handleOpenModal={handleOpenModal} />
+        <CotizacionModal isModalOpen={isModalOpen} onCloseModal={handleCloseModal} />
       </Grid>
     </>
   );

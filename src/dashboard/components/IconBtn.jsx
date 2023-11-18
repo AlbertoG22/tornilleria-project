@@ -1,7 +1,7 @@
 import { IconButton } from '@mui/material'; 
 import { AddOutlined } from '@mui/icons-material';
 
-export const IconBtn = () => {
+export const IconBtn = ({ handleOpenModal }) => {
   return (
     <>
       <IconButton
@@ -14,6 +14,7 @@ export const IconBtn = () => {
           right: 50,
           bottom: 50
         }}
+        onClick={ handleOpenModal }
       >
         <AddOutlined sx={{ fontSize: 30 }} />
       </IconButton>
