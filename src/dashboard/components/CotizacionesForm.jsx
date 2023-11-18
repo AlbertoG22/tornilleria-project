@@ -23,7 +23,7 @@ export const CotizacionForm = () => {
   };
 
   return (
-    <div>
+    <>
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
@@ -79,6 +79,6 @@ export const CotizacionForm = () => {
       <Button variant="contained" color="primary" onClick={handleAddRow}>
         Add row
       </Button>
-    </div>
+    </>
   );
 };

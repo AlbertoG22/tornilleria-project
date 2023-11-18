@@ -1,4 +1,5 @@
 import Modal from 'react-modal';
+import { CotizacionForm } from './';
 
 const customStyles = {
   overlay: {
@@ -26,12 +27,7 @@ export const CotizacionModal = ({ isModalOpen, onCloseModal }) => {
     >
       <h1>Nueva Cotización</h1>
       <hr />
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
-        inventore nostrum! Eum aliquam, molestias numquam totam laudantium sequi
-        est laboriosam, neque nostrum placeat iure dolorum reiciendis
-        exercitationem ab, similique voluptatibus.
-      </p>
+      <CotizacionForm />
     </Modal>
   );
 };
